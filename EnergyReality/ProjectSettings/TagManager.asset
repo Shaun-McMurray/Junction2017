@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - Socket
+  - ProductImage
+  - ProductInfo
   layers:
   - Default
   - TransparentFX
