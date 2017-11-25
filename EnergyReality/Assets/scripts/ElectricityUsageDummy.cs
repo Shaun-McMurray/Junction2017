@@ -10,6 +10,7 @@ public class ElectricityUsageDummy : MonoBehaviour {
     {
         float spriteNumber = 0;
         float electricalOutput = Random.Range(0, 5000);
+
         if (electricalOutput < 500)
         {
             return spriteNumber = 1;

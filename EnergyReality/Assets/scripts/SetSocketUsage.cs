@@ -10,8 +10,12 @@ public class SetSocketUsage : MonoBehaviour {
     private GameObject[] mySockets;
     private float spriteNumber;
 
+    GetData data;
+
     // Use this for initialization
     void Start () {
+        data = GetComponent<GetData>();
+
         mySockets = GameObject.FindGameObjectsWithTag("Socket");
 
         SetUsage();
@@ -22,7 +26,9 @@ public class SetSocketUsage : MonoBehaviour {
 
         foreach (GameObject socketImage in mySockets)
         {
-            SetSocketColour(socketImage, GetComponent<ElectricityUsageDummy>().ElectricalUsagePerYear());
+            
+
+            //SetSocketColour(socketImage, GetComponent<ElectricityUsageDummy>().ElectricalUsagePerYear());
         }
 	}
 
@@ -46,17 +52,17 @@ public class SetSocketUsage : MonoBehaviour {
         }
     }
 
-    void SetSocketGood(Image socketImage)
+    public void SetSocketGood(Image socketImage)
     {
         socketImage.sprite = green;
     }
 
-    void SetSocketOk(Image socketImage)
+    public void SetSocketOk(Image socketImage)
     {
         socketImage.sprite = yellow;
     }
 
-    void SetSocketBad(Image socketImage)
+    public void SetSocketBad(Image socketImage)
     {
         socketImage.sprite = red;
     }
