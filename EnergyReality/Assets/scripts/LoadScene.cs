@@ -7,8 +7,8 @@ using UnityEngine.UI;
 public class LoadScene : MonoBehaviour {
 
     private Button loadButton;
-    public string scene; // Add the name of the scene. Script attached to buttons. Update build settings.
-	// Use this for initialization
+    	public InputField messageField;
+    // Use this for initialization
 	void Start () {
         loadButton = GetComponent<Button>();
         loadButton.onClick.AddListener(OnClick);
@@ -16,6 +16,6 @@ public class LoadScene : MonoBehaviour {
 	
 	// Update is called once per frame
 	void OnClick () {
-        SceneManager.LoadScene(scene);
+        //messageField.text = "Leave a message...";
 	}
 }
