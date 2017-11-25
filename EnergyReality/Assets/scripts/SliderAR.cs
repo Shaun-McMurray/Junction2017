@@ -53,15 +53,15 @@ public class SliderAR : MonoBehaviour {
         }
         else if (sliderValue <= 1)
         {
-			output = Mathf.Round((data.GetHourOutput() * 10) / 15); 
+			output =  1f + Mathf.Round((data.GetHourOutput() * 10) / 15); 
             indvidual = output / 5;
-            textSlider.text = "Current Electrical Use: " + output + " watts" + "\n"
+            textSlider.text = "Past Hour Usage: " + output + " watts" + "\n"
             + "Individual Use: " + indvidual;
         } else if (sliderValue <= 2)
         {
 			output = Mathf.Round((data.GetDayOutput() * 5 )/ 15); 
            indvidual = output / 5;
-            textSlider.text = "Current Electrical Use: " + output + " watts" + "\n"
+            textSlider.text = "Past Day Usage: " + output + " watts" + "\n"
             + "Individual Use: " + indvidual;
 
         }
@@ -69,7 +69,7 @@ public class SliderAR : MonoBehaviour {
         {
 			output = Mathf.Round(data.GetWeekOutput() / 15); 
             indvidual = output / 5;
-            textSlider.text = "Current Electrical Use: " + output + " watts" + "\n"
+            textSlider.text = "Past Week Usage: " + output + " watts" + "\n"
             + "Individual Use: " + indvidual;
 
         }
@@ -77,14 +77,14 @@ public class SliderAR : MonoBehaviour {
         {
 			output = Mathf.Round(data.GetMonthOutput() / 15); 
             indvidual = output / 5;
-            textSlider.text = "Current Electrical Use: " + output + " watts" + "\n"
+            textSlider.text = "Past Month Usage: " + output + " watts" + "\n"
             + "Individual Use: " + indvidual;
         }
         else if(sliderValue > 4)
         {
 			output = Mathf.Round(data.GetYearOutput() / 15); 
             indvidual = output / 5;
-            textSlider.text = "Current Electrical Use: " + output + " watts" + "\n"
+            textSlider.text = "Past Year Usage: " + output + " watts" + "\n"
             + "Individual Use: " + indvidual;
         }
     }
