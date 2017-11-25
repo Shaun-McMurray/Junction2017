@@ -32,7 +32,6 @@ public class MockData : MonoBehaviour
                     }
                 }
             }
-            
         }
 
         var encoding = new System.Text.UTF8Encoding();

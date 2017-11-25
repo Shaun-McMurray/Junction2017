@@ -12,12 +12,16 @@ public class SelectMapOutput : MonoBehaviour {
 
     float output;
   
+    public Sprite green;
+    public Sprite yellow;
+    public Sprite red;
 
     // Use this for initialization
     void Start () {
         data = GetComponentInParent<GetData>();
 
         mySockets = GameObject.FindGameObjectsWithTag("Socket");
+        Debug.Log(mySockets.Length);
 
         textSlider = GetComponentInChildren<Text>();
         randomizeSockets = GetComponentInParent<SetSocketUsage>();
@@ -53,18 +57,18 @@ public class SelectMapOutput : MonoBehaviour {
             float socketValue = Random.Range(outputPerSocket * 0.5f, outputPerSocket * 1.5f);
             float deviation = (outputPerSocket * 0.25f); 
             output = output - Random.Range(outputPerSocket * 0.5f, outputPerSocket * 1.5f);
-
+            Debug.Log(socket.transform);
             if (socketValue >= (outputPerSocket + deviation))
             {
-                randomizeSockets.SetSocketBad(socket.GetComponent<Image>());
+                socket.GetComponent<Image>().sprite = red;
             }
             else if (socketValue >= (outputPerSocket - deviation))
             {
-                randomizeSockets.SetSocketOk(socket.GetComponent<Image>());
+                socket.GetComponent<Image>().sprite = yellow;
             }
             else
             {
-                randomizeSockets.SetSocketGood(socket.GetComponent<Image>());
+                socket.GetComponent<Image>().sprite = green;
             }
         }
     }
