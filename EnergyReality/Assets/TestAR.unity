@@ -1822,6 +1822,22 @@ Prefab:
     - {fileID: 114870199330177166, guid: eb6c10d61b49c4e439cc5a68f2dcee92, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: eb6c10d61b49c4e439cc5a68f2dcee92, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &1282331019 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1223751547451960, guid: 19b169fe44192b147afa3a0935262235,
+    type: 2}
+  m_PrefabInternal: {fileID: 1382819159}
+--- !u!114 &1282331021
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1282331019}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 650c3ac4d1aeb2b4080baf4a0559395d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!224 &1340514347 stripped
 RectTransform:
   m_PrefabParentObject: {fileID: 224473997553120226, guid: a37072d0444e84663ab6ea2ed392fb88,
@@ -2010,7 +2026,18 @@ Prefab:
       propertyPath: m_Text
       value: myHouse
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 114285509949100940, guid: 19b169fe44192b147afa3a0935262235,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1282331021}
+    - target: {fileID: 114285509949100940, guid: 19b169fe44192b147afa3a0935262235,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: LoadMyHouse
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 114244295101304812, guid: 19b169fe44192b147afa3a0935262235, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 19b169fe44192b147afa3a0935262235, type: 2}
   m_IsPrefabParent: 0
 --- !u!1001 &1433116967
