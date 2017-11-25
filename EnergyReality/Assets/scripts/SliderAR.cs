@@ -47,33 +47,33 @@ public class SliderAR : MonoBehaviour {
         if (sliderValue <= 0)
         {
 			output = Mathf.Round(data.GetCurrentOutput()); 
-            textSlider.text = "Current Electrical Output " + output + " watts";
+            textSlider.text = "Current Electrical Use: " + output + " watts";
         }
         else if (sliderValue <= 1)
         {
 			output = Mathf.Round((data.GetHourOutput() * 10) / 15); 
-            textSlider.text = "Electrical Output per Hour " + output + " watts";
+            textSlider.text = "Electrical Use per Hour: " + output + " watts";
         } else if (sliderValue <= 2)
         {
 			output = Mathf.Round((data.GetDayOutput() * 5 )/ 15); 
-            textSlider.text = "Electrical Output per Day " + output + " watts";
+            textSlider.text = "Electrical Use per Day: " + output + " watts";
 
         }
         else if (sliderValue <= 3)
         {
 			output = Mathf.Round(data.GetWeekOutput() / 15); 
-            textSlider.text = "Electrical Output per Week " + output + " watts";
+            textSlider.text = "Electrical Use per Week: " + output + " watts";
 
         }
         else if (sliderValue <= 4)
         {
 			output = Mathf.Round(data.GetMonthOutput() / 15); 
-            textSlider.text = "Electrical Output per Month " + output + " watts";
+            textSlider.text = "Electrical Use per Month: " + output + " watts";
         }
         else if(sliderValue > 4)
         {
 			output = Mathf.Round(data.GetYearOutput() / 15); 
-            textSlider.text = "Electrical Output per Year " + output + " watts";
+            textSlider.text = "Electrical Use per Year: " + output + " watts";
         }
     }
 }

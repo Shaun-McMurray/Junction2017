@@ -16,6 +16,8 @@ public class HideMap : MonoBehaviour
     void Start()
     {
         Button btn = mapButton.GetComponent<Button>();
+        //mapActive = false;
+        TaskOnClick();
     }
 
     public void TaskOnClick()
