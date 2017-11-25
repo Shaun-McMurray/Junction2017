@@ -9,7 +9,7 @@ public class SliderAR : MonoBehaviour {
     GetData data;
 
     float output;
-
+    float indvidual;
 
     // Use this for initialization
     void Start () {
@@ -47,33 +47,45 @@ public class SliderAR : MonoBehaviour {
         if (sliderValue <= 0)
         {
 			output = Mathf.Round(data.GetCurrentOutput()); 
-            textSlider.text = "Current Electrical Use: " + output + " watts";
+            indvidual = output / 5;
+            textSlider.text = "Current Electrical Use: " + output + " watts" + "\n"
+            + "Individual Use: " + indvidual;
         }
         else if (sliderValue <= 1)
         {
 			output = Mathf.Round((data.GetHourOutput() * 10) / 15); 
-            textSlider.text = "Electrical Use per Hour: " + output + " watts";
+            indvidual = output / 5;
+            textSlider.text = "Current Electrical Use: " + output + " watts" + "\n"
+            + "Individual Use: " + indvidual;
         } else if (sliderValue <= 2)
         {
 			output = Mathf.Round((data.GetDayOutput() * 5 )/ 15); 
-            textSlider.text = "Electrical Use per Day: " + output + " watts";
+           indvidual = output / 5;
+            textSlider.text = "Current Electrical Use: " + output + " watts" + "\n"
+            + "Individual Use: " + indvidual;
 
         }
         else if (sliderValue <= 3)
         {
 			output = Mathf.Round(data.GetWeekOutput() / 15); 
-            textSlider.text = "Electrical Use per Week: " + output + " watts";
+            indvidual = output / 5;
+            textSlider.text = "Current Electrical Use: " + output + " watts" + "\n"
+            + "Individual Use: " + indvidual;
 
         }
         else if (sliderValue <= 4)
         {
 			output = Mathf.Round(data.GetMonthOutput() / 15); 
-            textSlider.text = "Electrical Use per Month: " + output + " watts";
+            indvidual = output / 5;
+            textSlider.text = "Current Electrical Use: " + output + " watts" + "\n"
+            + "Individual Use: " + indvidual;
         }
         else if(sliderValue > 4)
         {
 			output = Mathf.Round(data.GetYearOutput() / 15); 
-            textSlider.text = "Electrical Use per Year: " + output + " watts";
+            indvidual = output / 5;
+            textSlider.text = "Current Electrical Use: " + output + " watts" + "\n"
+            + "Individual Use: " + indvidual;
         }
     }
 }
