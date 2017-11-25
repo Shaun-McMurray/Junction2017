@@ -1557,6 +1557,7 @@ MonoBehaviour:
   scanButton: {fileID: 1859723042}
   field1: {fileID: 1296170015}
   field2: {fileID: 2139324027}
+  image: {fileID: 1957683811}
 --- !u!1 &1957683809
 GameObject:
   m_ObjectHideFlags: 0
