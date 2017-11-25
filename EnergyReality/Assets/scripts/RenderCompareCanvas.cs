@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class RenderCompareCanvas : MonoBehaviour {
 
     private Button compare;
-    private GameObject compareCanvasPrefab;
+    private GameObject comparePanelPrefab;
 
     private Transform parent;
 	// Use this for initialization
@@ -14,14 +14,16 @@ public class RenderCompareCanvas : MonoBehaviour {
         compare = GetComponent<Button>();
         compare.onClick.AddListener(OnClick);
         
-        compareCanvasPrefab = GameObject.Find("ComparisonCanvas");
+        comparePanelPrefab = GameObject.Find("ComparisonPanel");
 	}
 
     void OnClick()
     {
         parent = compare.GetComponentInParent<Transform>();
 
-        GameObject compareCanvas = Instantiate (compareCanvasPrefab);
-        compareCanvas.transform.SetParent(parent);
+        GameObject comparePanel = Instantiate (comparePanelPrefab);
+        comparePanel.transform.SetParent(parent, false);
+        comparePanel.GetComponent<RectTransform>()
+            .transform.localPosition = new Vector3 (-570, -800, 0);
     }
 }
