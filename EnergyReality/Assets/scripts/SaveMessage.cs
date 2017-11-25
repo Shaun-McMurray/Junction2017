@@ -5,7 +5,6 @@ using UnityEngine;
 
 public class SaveMessage : MonoBehaviour {
 
-	public GameObject buttonParent;
 	Text inputMessage;
 
 	StoreData messageData;
@@ -13,7 +12,6 @@ public class SaveMessage : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		messageData = new StoreData ();
-		//inputMessage = messagePanel.GetComponentInChildren<Text>();
 		StoreData.messages = ""; // Removing "new text" on startup
 
 		var input = gameObject.GetComponent<InputField>();
