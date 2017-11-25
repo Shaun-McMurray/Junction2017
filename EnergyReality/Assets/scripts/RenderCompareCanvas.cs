@@ -26,6 +26,6 @@ public class RenderCompareCanvas : MonoBehaviour
         GameObject comparePanel = Instantiate(comparePanelPrefab);
         comparePanel.transform.SetParent(parent, false);
         comparePanel.GetComponent<RectTransform>()
-            .transform.localPosition = new Vector3(-570, -800, 0);
+            .transform.localPosition = new Vector3(-370, -600, 0);
     }
 }
