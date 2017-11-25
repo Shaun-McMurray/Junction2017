@@ -3,7 +3,8 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Socket
   layers:
   - Default
   - TransparentFX
@@ -40,4 +41,13 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: BackgroundLayer
+    uniqueID: 3325401163
+    locked: 0
+  - name: MiddleLayer
+    uniqueID: 930154671
+    locked: 0
+  - name: ForegroundLayer
+    uniqueID: 3908588013
     locked: 0
