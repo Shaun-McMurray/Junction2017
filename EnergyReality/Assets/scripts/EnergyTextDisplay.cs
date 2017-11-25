@@ -20,7 +20,7 @@ public class EnergyTextDisplay : MonoBehaviour {
 			//kWh = Random.Range(0.0f, 10.0f);
 			energyData = "Energy usage: " + kWh + " kWh";
 			text.text = energyData;
-			Debug.Log(energyData);
+//			Debug.Log(energyData);
 			counter = 0;
 		//}
 		//counter++;
