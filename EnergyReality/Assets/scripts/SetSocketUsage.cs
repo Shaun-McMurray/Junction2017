@@ -14,11 +14,12 @@ public class SetSocketUsage : MonoBehaviour {
     void Start () {
         mySockets = GameObject.FindGameObjectsWithTag("Socket");
 
-        SetUsage(spriteNumber);
+        SetUsage();
 	}
 	
 	// Update is called once per frame
-	void SetUsage (float number) {
+	public void SetUsage () {
+
         foreach (GameObject socketImage in mySockets)
         {
             SetSocketColour(socketImage, GetComponent<ElectricityUsageDummy>().ElectricalUsagePerYear());
@@ -29,15 +30,15 @@ public class SetSocketUsage : MonoBehaviour {
     {
         if(number == 1)
         {
-            SetSocketGood(imageObject.GetComponent<Image>());
+            imageObject.GetComponent<Image>().sprite = green;
         }
         else if (number == 2)
         {
-            SetSocketOk(imageObject.GetComponent<Image>());
+            imageObject.GetComponent<Image>().sprite = yellow;
         }
         else if (number == 3)
         {
-            SetSocketBad(imageObject.GetComponent<Image>());
+            imageObject.GetComponent<Image>().sprite = red;
         }
         else
         {

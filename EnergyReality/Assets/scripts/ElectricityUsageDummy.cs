@@ -5,7 +5,7 @@ public class ElectricityUsageDummy : MonoBehaviour {
     float electricalOutput;
 
 	
-
+    // kWt per year
     public float ElectricalUsagePerYear()
     {
         float spriteNumber = 0;
